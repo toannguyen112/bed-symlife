@@ -1,0 +1,183 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import './customize/content.scss';
+
+@layer base {
+    @font-face {
+        font-family: 'Phudu';
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+        src: url('/public/assets/fonts/Phudu-Regular.ttf');
+    }
+
+    @font-face {
+        font-family: 'Phudu';
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+        src: url('/public/assets/fonts/Phudu-Medium.ttf');
+    }
+
+    @font-face {
+        font-family: 'Phudu';
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+        src: url('/public/assets/fonts/Phudu-SemiBold.ttf');
+    }
+
+    @font-face {
+        font-family: 'Phudu';
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+        src: url('/public/assets/fonts/Phudu-Bold.ttf');
+    }
+
+    // FONT-BeauSans
+    @font-face {
+        font-family: 'BT-BeauSans';
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+        src: url('/public/assets/fonts/BT-BeauSans-Regular.ttf');
+    }
+
+    @font-face {
+        font-family: 'BT-BeauSans';
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+        src: url('/public/assets/fonts/BT-BeauSans-Medium.ttf');
+    }
+
+    @font-face {
+        font-family: 'BT-BeauSans';
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+        src: url('/public/assets/fonts/BT-BeauSans-Bold.ttf');
+    }
+}
+
+// @import '@core/scss/base';
+@import 'customize/button.scss';
+@import 'banner.scss';
+@import 'customize/card-blog.scss';
+@import 'customize/content.scss';
+@import 'customize/type.scss';
+
+/* width */
+::-webkit-scrollbar {
+    width: 1px;
+    height: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: black;
+}
+
+.check-control {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    @apply relative;
+
+    .checkmark {
+        @apply absolute top-1/2 left-0 overflow-hidden bg-white transform -translate-y-1/2 w-[18px] h-[18px] border-gray-400 border rounded-sm;
+
+        &:before {
+            content: '';
+            @apply block absolute w-full h-full inset-0 z-10 bg-no-repeat bg-center;
+            background-image: url('/assets/images/icons/tick.png');
+            background-size: contain;
+        }
+    }
+
+    .label-check {
+        @apply text-gray-600 cursor-pointer block w-full pl-[26px] relative z-10;
+    }
+
+    &:hover {
+        .label-check {
+            @apply font-medium;
+        }
+
+        .checkmark {
+            @apply border-primary-600;
+        }
+    }
+
+    input {
+        @apply absolute opacity-0 top-0 left-0;
+
+        &:checked {
+            ~ .label-check {
+                @apply font-medium;
+            }
+
+            ~ .checkmark {
+                @apply bg-primary-600 border-primary-600;
+
+                &:before {
+                    @apply opacity-100;
+                }
+            }
+        }
+    }
+
+    .gg-spinner {
+        transform: scale(var(--ggs, 1));
+    }
+
+    .gg-spinner,
+    .gg-spinner::after,
+    .gg-spinner::before {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .gg-spinner::after,
+    .gg-spinner::before {
+        content: '';
+        position: absolute;
+        border-radius: 100px;
+    }
+
+    .gg-spinner::before {
+        animation: spinner 1s cubic-bezier(0.6, 0, 0.4, 1) infinite;
+        border: 3px solid transparent;
+        border-top-color: currentColor;
+    }
+
+    .gg-spinner::after {
+        border: 3px solid;
+        opacity: 0.2;
+    }
+
+    @keyframes spinner {
+        0% {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(359deg);
+        }
+    }
+}
