@@ -70,6 +70,7 @@
     <section>
         <JPicture src="/assets/images/matbang.png" class="w-full h-full" />
     </section>
+    <Resone />
 </template>
 
 <script>
