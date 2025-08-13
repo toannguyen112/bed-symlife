@@ -1,9 +1,8 @@
 <template>
     <div class="bg-blue-900 text-white py-10">
         <!-- Header -->
-        <div class="text-center mb-8">
-            <h2 class="text-yellow-400 font-medium uppercase font-display text-[60px] leading-[125%]">Lý Do Sở Hữu</h2>
-            <h1 class="text-[60px] font-medium font-display">SYMLIFE</h1>
+        <div class="text-center mb-8 flex items-center justify-center">
+            <JPicture src="/assets/images/whys.png" alt="House Image" class="max-h-[280px]" />
         </div>
 
         <div class="container">

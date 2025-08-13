@@ -2,7 +2,7 @@
     <section class="bg-[#0A1F5B] text-white py-10">
         <!-- Header -->
         <div class="text-center mb-8">
-            <h2 class="text-[#F2C94C] uppercase font-display text-[48px] md:text-[60px] leading-tight">
+            <h2 class="yellow-primary uppercase font-medium font-display text-[48px] md:text-[60px] leading-tight">
                 Tiện ích cảnh quan
             </h2>
         </div>

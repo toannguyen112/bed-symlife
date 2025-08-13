@@ -181,3 +181,20 @@
         }
     }
 }
+
+.gradient-primary {
+    background: linear-gradient(90.44deg, #1d70c3 0.29%, #102c88 101.73%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.yellow-primary {
+    /* Gold */
+    background: linear-gradient(91.14deg, #dea23c 1.33%, #ffe47d 48.28%, #e9b141 63.6%, #f4cb30 104.12%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
