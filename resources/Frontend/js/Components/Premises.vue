@@ -1,9 +1,11 @@
 <template>
-    <section class="bg-[#102C88] py-[120px]">
+    <section class="bg-[#102C88] md:py-[120px] py-[32px]">
         <div class="container grid grid-cols-3 max-md:gap-y-[12px] md:gap-x-[64px]">
             <!-- Tabs bên trái -->
             <div class="col-span-full md:col-span-1">
-                <div class="text-[60px] font-display yellow-primary font-medium uppercase mb-8">mặt bằng căn hộ</div>
+                <div class="text-[40px] md:text-[60px] font-display yellow-primary font-medium uppercase mb-8">
+                    mặt bằng căn hộ
+                </div>
                 <div class="space-y-[1rem]">
                     <div
                         v-for="(tab, index) in tabs"

@@ -1,6 +1,8 @@
 <template>
     <div class="bg-banner-blue py-[80px] space-y-[2rem] bg-cover">
-        <div class="font-display text-[60px] font-medium text-center uppercase gradient-primary">Khám phá symlife</div>
+        <div class="font-display text-[40px] md:text-[60px] font-medium text-center uppercase gradient-primary">
+            Khám phá symlife
+        </div>
         <div class="container">
             <!-- Slider chính -->
             <swiper
@@ -11,7 +13,7 @@
                 :space-between="10"
             >
                 <swiper-slide v-for="(img, i) in images" :key="i">
-                    <img :src="img" class="w-full h-[500px] object-cover rounded-lg" />
+                    <img :src="img" class="w-full md:h-[725px] object-cover rounded-lg" />
                 </swiper-slide>
             </swiper>
 
@@ -25,10 +27,12 @@
                 @swiper="setThumbsSwiper"
             >
                 <swiper-slide v-for="(img, i) in images" :key="i" class="cursor-pointer">
-                    <img
-                        :src="img"
-                        class="w-full h-[100px] object-cover rounded-md border border-transparent hover:border-blue-500"
-                    />
+                    <div class="aspect-w-2 aspect-h-1 md:min-w-[100px] h-[150px] md:min-h-[100px]">
+                        <img
+                            :src="img"
+                            class="w-full object-cover rounded-md border border-transparent hover:border-blue-500"
+                        />
+                    </div>
                 </swiper-slide>
             </swiper>
         </div>
