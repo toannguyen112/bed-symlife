@@ -2,15 +2,15 @@
     <header class="bg-[#0A2552] text-[#B2DDFF] py-[8px]">
         <div class="container">
             <div class="grid grid-cols-5">
-                <div class="md:col-span-2 flex items-center space-x-[24px] justify-center">
+                <div class="col-span-full md:col-span-2 flex items-center space-x-[24px] justify-center max-md:hidden">
                     <div>Giới thiệu</div>
                     <div>Mặt bằng</div>
                     <div>Tiện ích</div>
                 </div>
-                <div class="md:col-span-1 flex items-center justify-center">
+                <div class="col-span-full md:col-span-1 flex items-center justify-center">
                     <JPicture src="/assets/images/logo.png" />
                 </div>
-                <div class="md:col-span-2 flex items-center space-x-[24px] justify-center">
+                <div class="col-span-full md:col-span-2 flex items-center space-x-[24px] justify-center max-md:hidden">
                     <div>Căn hộ</div>
                     <div>Thư viện</div>
                     <div>Liên hệ</div>
