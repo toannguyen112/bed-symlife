@@ -83,7 +83,7 @@
     <Benefit :slides="resone" />
     <Premises />
     <Discover />
-
+    <SliderCom />
     <section>
         <div class="grid grid-cols-12">
             <!-- Form bên trái -->
