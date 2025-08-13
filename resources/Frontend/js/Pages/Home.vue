@@ -82,8 +82,9 @@
     </section>
     <Benefit :slides="resone" />
     <Premises />
-    <Discover />
     <SliderCom />
+    <Discover />
+
     <section id="lienhe">
         <div class="grid grid-cols-12">
             <!-- Form bên trái -->

@@ -1,5 +1,5 @@
 <template>
-    <section id="tienich" class="bg-[#0A1F5B] text-white py-10">
+    <section id="tienich" class="bg-blue-gradient text-white md:pt-[120px]">
         <!-- Header -->
         <div class="text-center mb-8">
             <h2 class="yellow-primary uppercase font-medium font-display text-[48px] md:text-[60px] leading-tight">

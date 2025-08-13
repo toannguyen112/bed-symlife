@@ -1,5 +1,5 @@
 <template>
-    <section id="matbang" class="bg-[#102C88] md:py-[120px] py-[32px]">
+    <section id="matbang" class="bg-blue-gradient md:pt-[120px] py-[32px]">
         <div class="container grid grid-cols-3 max-md:gap-y-[12px] md:gap-x-[64px]">
             <!-- Tabs bên trái -->
             <div class="col-span-full md:col-span-1">
