@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-banner-blue py-[80px] space-y-[2rem] bg-cover">
+    <div id="thuvien" class="bg-banner-blue py-[80px] space-y-[2rem] bg-cover">
         <div class="font-display text-[40px] md:text-[60px] font-medium text-center uppercase gradient-primary">
             Khám phá symlife
         </div>

@@ -1,12 +1,12 @@
 <template>
-    <section class="bg-blue-gradient">
-        <div class="slider-wrapper container py-[120px]">
+    <section id="canho" class="bg-blue-gradient">
+        <div class="slider-wrapper container py-[32px] md:py-[120px]">
             <!-- Tabs -->
             <div class="tabs">
                 <div
                     v-for="tab in tabs"
                     :key="tab"
-                    class="tab text-[2rem] font-bold font-display"
+                    class="tab text-[1rem] md:text-[2rem] font-bold font-display"
                     :class="{ active: activeTab === tab }"
                     @click="activeTab = tab"
                 >

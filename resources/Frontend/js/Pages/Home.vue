@@ -2,7 +2,7 @@
     <section>
         <JPicture src="/assets/images/banner.png" class="w-full h-full" />
     </section>
-    <section class="py-[48px] bg-banner-blue bg-cover">
+    <section id="about" class="py-[48px] bg-banner-blue bg-cover">
         <div class="container space-y-[48px]">
             <div class="text-center gradient-primary">
                 <div class="font-display text-[24px] space-x-[8px]">
@@ -84,7 +84,7 @@
     <Premises />
     <Discover />
     <SliderCom />
-    <section>
+    <section id="lienhe">
         <div class="grid grid-cols-12">
             <!-- Form bên trái -->
             <div

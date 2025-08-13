@@ -3,17 +3,17 @@
         <div class="container">
             <div class="grid grid-cols-5">
                 <div class="col-span-full md:col-span-2 flex items-center space-x-[24px] justify-center max-md:hidden">
-                    <div>Giới thiệu</div>
-                    <div>Mặt bằng</div>
-                    <div>Tiện ích</div>
+                    <a href="#about"> Giới thiệu</a>
+                    <a href="#matbang">Mặt bằng</a>
+                    <a href="#tienich">Tiện ích</a>
                 </div>
                 <div class="col-span-full md:col-span-1 flex items-center justify-center">
                     <JPicture src="/assets/images/logo.png" />
                 </div>
                 <div class="col-span-full md:col-span-2 flex items-center space-x-[24px] justify-center max-md:hidden">
-                    <div>Căn hộ</div>
-                    <div>Thư viện</div>
-                    <div>Liên hệ</div>
+                    <a href="#canho">Căn hộ</a>
+                    <a href="#thuvien">Thư viện</a>
+                    <a href="#lienhe">Liên hệ</a>
                     <div class="flex items-center space-x-[12px] border border-[#DEA23C] rounded-[80px] p-[6px]">
                         <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect y="0.96582" width="32" height="32" rx="16" fill="#0A2552" />
