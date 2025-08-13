@@ -22,7 +22,7 @@
                 <SwiperSlide v-for="(item, index) in slides" :key="index">
                     <div class="relative">
                         <!-- Background image -->
-                        <JPicture :src="item" class="w-full h-[500px] object-cover" />
+                        <JPicture :src="item" class="w-full md:h-[670px] object-cover" />
 
                         <!-- Overlay nội dung -->
                         <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/30 px-6">

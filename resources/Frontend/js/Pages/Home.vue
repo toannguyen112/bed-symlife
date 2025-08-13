@@ -124,7 +124,7 @@
 
                         <button
                             type="submit"
-                            class="w-full py-3 rounded bg-[#102c88] bg-gradient-to-r from-[#1e58c6] to-[#0a3c8a] hover:opacity-90 transition uppercase"
+                            class="w-full py-3 rounded bg-blue-gradient hover:opacity-90 transition uppercase label-1"
                         >
                             Gửi thông tin
                         </button>
