@@ -23,30 +23,6 @@
                     </swiper-slide>
                 </swiper>
             </div>
-
-            <!-- Custom Navigation Buttons -->
-            <button class="swiper-button-prev" @click="onPrevClick">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M21.6001 12H1.8001M1.8001 12L10.2001 5M1.8001 12L10.2001 19"
-                        stroke="currentColor"
-                        stroke-width="3.6"
-                        stroke-linecap="square"
-                        stroke-linejoin="bevel"
-                    />
-                </svg>
-            </button>
-            <button class="swiper-button-next" @click="onNextClick">
-                <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M2.3999 10H22.1999M22.1999 10L13.7999 3M22.1999 10L13.7999 17"
-                        stroke="currentColor"
-                        stroke-width="3.6"
-                        stroke-linecap="square"
-                        stroke-linejoin="bevel"
-                    />
-                </svg>
-            </button>
         </div>
     </div>
 </template>

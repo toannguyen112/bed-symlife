@@ -4,7 +4,7 @@
     </section>
     <section class="py-[48px] bg-banner-blue bg-cover">
         <div class="container space-y-[48px]">
-            <div class="text-center text-[#102C88]">
+            <div class="text-center gradient-primary">
                 <div class="font-display text-[24px] space-x-[8px]">
                     <span class="text-[24px]">Nơi nhịp sống</span>
                     <span class="text-[32px] font-semibold">Bình yên</span>
