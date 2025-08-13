@@ -397,8 +397,8 @@ module.exports = {
             'gradient-blue': 'linear-gradient(330.4deg, #79716B 19.98%, #79716B 96.8%)',
             'gradient-blue-revert': 'linear-gradient(-330.4deg, #2B40B6 19.98%, #2067E3 96.8%)',
             'gradient-red': 'linear-gradient(270deg, #ED3237 0%, #B00C0B 100%)',
-            'gradient-gray': 'linear-gradient(180deg, #FCFCFC 0%, #EAECF0 85.77%, #D0D5DD 112.33%)',
-            'banner-courses': "url('/public/assets/images/banner-courses.png')",
+            'gradient-grblueay': 'linear-gradient(180deg, #FCFCFC 0%, #EAECF0 85.77%, #D0D5DD 112.33%)',
+            'banner-blue': "url('/public/assets/images/bg-blue.png')",
             'banner-service-right': "url('/public/assets/images/service/service-banner-right.png')",
             'banner-service-left': "url('/public/assets/images/service/service-banner-left.png')",
 
@@ -408,6 +408,7 @@ module.exports = {
             'funky-style': "url('/public/assets/images/funky-style-courses.png')",
             'advise': "url('/public/assets/images/products/bg-advise.png')",
             'hero-transparent': "url('/public/assets/images/banner-slide.png')",
+            'bg-10': "url('/public/assets/images/bg-10.png')",
         },
 
         extend: {
@@ -458,7 +459,7 @@ module.exports = {
             }),
 
             fontFamily: {
-                display: ['Phudu', 'sans-serif'],
+                display: ['Crimson Pro', 'sans-serif'],
                 beau: ['BT- BeauSans', 'sans-serif'],
                 sans: [
                     'Quicksand',
