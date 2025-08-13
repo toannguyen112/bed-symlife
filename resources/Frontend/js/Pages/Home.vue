@@ -87,9 +87,11 @@
     <section>
         <div class="grid grid-cols-12">
             <!-- Form bên trái -->
-            <div class="col-span-12 md:col-span-5 bg-cover bg-center bg-bg-10 p-8 text-white flex items-center w-full">
+            <div
+                class="col-span-12 md:col-span-5 bg-cover bg-center bg-bg-10 p-8 text-gray-300 flex items-center w-full"
+            >
                 <div class="w-full">
-                    <h2 class="font-display font-medium uppercase mb-6 text-[48px]">
+                    <h2 class="font-display font-medium uppercase mb-6 text-[48px] text-[#B2DDFF]">
                         Kết nối <br />
                         với chúng tôi
                     </h2>
