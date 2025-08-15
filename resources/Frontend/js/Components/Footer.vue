@@ -19,16 +19,19 @@
                     </div>
                     <div class="space-y-[1rem]">
                         <div>Hotline</div>
-                        <div>0987 654 321</div>
+                        <div>0908938966</div>
                         <div>Email</div>
-                        <div>symlife@gmail.com</div>
+                        <div>lienphat7879@gmail.com</div>
                     </div>
                     <div class="space-y-[1rem]">
                         <div>Kết nối với chúng tôi</div>
                         <div class="flex items-center space-x-[1rem]">
-                            <JPicture src="/assets/images/icons/facebook logo.png" />
-                            <JPicture src="/assets/images/icons/instagram.png" />
-                            <JPicture src="/assets/images/icons/zalo.png" />
+                            <a href="https://www.facebook.com/profile.php?id=61579292606180" target="_blank">
+                                <JPicture src="/assets/images/icons/facebook logo.png" />
+                            </a>
+                            <a href="https://zalo.me/0908938966" target="_blank">
+                                <JPicture src="/assets/images/icons/zalo.png" />
+                            </a>
                         </div>
                         <div class="flex items-center space-x-[12px] border border-[#DEA23C] rounded-[80px] p-[6px]">
                             <svg
@@ -67,7 +70,7 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <div class="text-white text-[18px]">0987 654 321</div>
+                            <div class="text-white text-[18px]">0908938966</div>
                         </div>
                     </div>
                 </div>

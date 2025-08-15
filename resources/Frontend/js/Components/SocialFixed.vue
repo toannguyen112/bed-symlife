@@ -1,7 +1,7 @@
 <template>
     <div class="fixed xl:bottom-10 bottom-5 xl:right-[32px] right-4 z-[100] space-y-3 md:space-y-4">
         <a
-            href="https://www.facebook.com/messages/t/626963343839860"
+            href="https://www.facebook.com/profile.php?id=61579292606180"
             target="_blank"
             rel="noopener noreferrer nofollow"
             class="w-12 h-12 rounded-full flex items-center justify-center"
@@ -9,7 +9,7 @@
             <JPicture src="/assets/images/icon-messenger.webp" alt="icon messenger" class="picture-cover" />
         </a>
         <a
-            href="https://zalo.me/0977333965"
+            href="https://zalo.me/0908938966"
             target="_blank"
             rel="noopener noreferrer nofollow"
             class="w-12 h-12 rounded-full flex items-center justify-center"
@@ -17,7 +17,7 @@
             <JPicture src="/assets/images/icon-zalo.webp" alt="icon zalo" class="picture-cover" />
         </a>
         <a
-            href="tel:0977333965"
+            href="tel:0908938966"
             rel="noopener noreferrer nofollow"
             class="w-12 h-12 rounded-full flex items-center justify-center bg-red-fks lg:hover:bg-green-fks duration-300 ease-in-out text-green-fks lg:hover:text-black-fks"
         >
