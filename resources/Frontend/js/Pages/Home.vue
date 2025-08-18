@@ -97,23 +97,61 @@
                         với chúng tôi
                     </h2>
 
-                    <form class="space-y-6">
+                    <div class="space-y-6">
                         <input
                             type="text"
                             placeholder="Họ và tên"
                             class="w-full bg-transparent border-b border-white/50 focus:border-white outline-none py-2"
                         />
-
+                        <JamFieldSet
+                            v-model="form.contact.data.Name"
+                            :field="{
+                                rules: rules,
+                                errors: errors,
+                                type: 'text',
+                                placeholder: tt('Họ tên *'),
+                                name: 'Họ tên',
+                                fieldName: 'Name',
+                                label: tt('Họ tên '),
+                                errorText: tt('Your error name'),
+                            }"
+                            :isSubmit="isSubmit"
+                            @setIsSubmit="setIsSubmit"
+                            :isContact="true"
+                            class="w-full bg-transparent border-b border-white/50 focus:border-white outline-none py-2"
+                        />
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <input
-                                type="text"
-                                placeholder="Số điện thoại"
-                                class="w-full bg-transparent border-b border-white/50 focus:border-white outline-none py-2"
+                            <JamFieldSet
+                                v-model="form.contact.data.Phone"
+                                :field="{
+                                    rules: rules,
+                                    errors: errors,
+                                    type: 'number',
+                                    placeholder: tt('Số điện thoại'),
+                                    name: 'Số điện thoại',
+                                    fieldName: 'Phone',
+                                    label: tt('Số điện thoại'),
+                                    errorText: tt('Form contact error phone'),
+                                }"
+                                :isSubmit="isSubmit"
+                                @setIsSubmit="setIsSubmit"
+                                :isContact="true"
                             />
-                            <input
-                                type="email"
-                                placeholder="Email"
-                                class="w-full bg-transparent border-b border-white/50 focus:border-white outline-none py-2"
+                            <JamFieldSet
+                                v-model="form.contact.data.Email"
+                                :field="{
+                                    rules: rules,
+                                    errors: errors,
+                                    type: 'email',
+                                    placeholder: tt('you@company.com'),
+                                    name: 'Email',
+                                    fieldName: 'Email',
+                                    label: tt('Email'),
+                                    errorText: tt('Form contact error email'),
+                                }"
+                                :isSubmit="isSubmit"
+                                @setIsSubmit="setIsSubmit"
+                                :isContact="true"
                             />
                         </div>
 
@@ -124,12 +162,14 @@
                         ></textarea>
 
                         <button
+                            @click="contact"
                             type="submit"
                             class="w-full py-3 rounded bg-blue-gradient hover:opacity-90 transition uppercase label-1"
                         >
-                            Gửi thông tin
+                            <div>{{ tt('Gửi thông tin') }}</div>
+                            <i class="gg-spinner" v-if="isLoading"></i>
                         </button>
-                    </form>
+                    </div>
                 </div>
             </div>
 
@@ -139,10 +179,29 @@
             </div>
         </div>
     </section>
+    <ModalSuccess
+        @close="closePopup"
+        :isSuccess="isSuccess"
+        :title="tt('Yêu cầu thành công')"
+        :description="
+            tt(
+                'Hệ thống đã nhận thông tin yêu cầu của khách hàng. Wecan sẽ liên hệ và tư vấn Quý khách trong thời gian sớm nhất.'
+            )
+        "
+    />
 </template>
 
 <script>
+import JamFieldSet from '../Components/Jam/FieldSet.vue'
+import { validateForm } from '@/validator'
+const emptyForm = {
+    Name: '',
+    Phone: null,
+    Email: '',
+    note: '',
+}
 export default {
+    components: { JamFieldSet },
     data() {
         return {
             resone: [
@@ -150,7 +209,53 @@ export default {
                 '/assets/images/reson/Asset 1 2.png',
                 '/assets/images/reson/Asset 1 3.png',
             ],
+            form: {
+                contact: {
+                    data: {
+                        ...emptyForm,
+                    },
+                    type: 'CONTACT_FORM',
+                },
+            },
+            rules: {
+                Name: 'required|min:3|max:25',
+                Phone: 'phone|required|min:10|max:11',
+                Email: 'email|required',
+            },
+            errors: {},
+            isSuccess: false,
+            isLoading: false,
+            isSubmit: false,
         }
+    },
+    methods: {
+        contact() {
+            this.errors = validateForm(this.form.contact.data, this.rules)
+
+            if (Object.keys(this.errors).length > 0) {
+                return false
+            }
+            this.isLoading = true
+
+            this.$inertia.post('contacts', this.form, {
+                preserveScroll: true,
+                onSuccess: () => {
+                    this.form.contact.data = { ...emptyForm }
+                    this.isSuccess = true
+                    this.isSubmit = true
+                    this.isLoading = false
+                    document.body.classList.add('overflow-hidden')
+                },
+            })
+        },
+        closePopup() {
+            this.isSuccess = false
+            document.body.classList.remove('overflow-hidden')
+        },
+        setIsSubmit(val) {
+            this.isSubmit = val
+        },
+        toggleT,
     },
 }
 </script>
