@@ -33,7 +33,9 @@
                                 <JPicture src="/assets/images/icons/zalo.png" />
                             </a>
                         </div>
-                        <div class="flex items-center space-x-[12px] border border-[#DEA23C] rounded-[80px] p-[6px]">
+                        <div
+                            class="inline-flex items-center space-x-[12px] border border-[#DEA23C] rounded-[80px] p-[6px]"
+                        >
                             <svg
                                 width="32"
                                 height="33"
