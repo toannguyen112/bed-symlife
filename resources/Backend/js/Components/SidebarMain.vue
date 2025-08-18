@@ -21,42 +21,6 @@
         <span>{{ tt('models.table_list.post-categories') }}</span>
     </Link>
     <Link
-        v-if="can('admin.introduces.index')"
-        :href="route('admin.introduces.index')"
-        :class="{ active: isUrl('admin.introduces.*') }"
-        class="item"
-    >
-        <bx:category />
-        <span>{{ tt('models.table_list.introduces') }}</span>
-    </Link>
-    <Link
-        v-if="can('admin.members.index')"
-        :href="route('admin.members.index')"
-        :class="{ active: isUrl('admin.members.*') }"
-        class="item"
-    >
-        <bx:category />
-        <span> Hình ảnh thi công </span>
-    </Link>
-    <Link
-        v-if="can('admin.feedback.index')"
-        :href="route('admin.feedback.index')"
-        :class="{ active: isUrl('admin.feedback.*') }"
-        class="item"
-    >
-        <bx:category />
-        <span>{{ tt('models.table_list.feedback') }}</span>
-    </Link>
-    <Link
-        v-if="can('admin.products.index')"
-        :href="route('admin.products.index')"
-        :class="{ active: isUrl('admin.products.*') }"
-        class="item"
-    >
-        <material-symbols:connect-without-contact />
-        <span>{{ tt('models.table_list.products') }}</span>
-    </Link>
-    <Link
         v-if="can('admin.sliders.index')"
         :href="route('admin.sliders.index')"
         :class="{ active: isUrl('admin.sliders.*') }"
