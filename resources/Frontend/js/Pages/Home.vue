@@ -98,11 +98,6 @@
                     </h2>
 
                     <div class="space-y-6">
-                        <input
-                            type="text"
-                            placeholder="Họ và tên"
-                            class="w-full bg-transparent border-b border-white/50 focus:border-white outline-none py-2"
-                        />
                         <JamFieldSet
                             v-model="form.contact.data.Name"
                             :field="{
@@ -154,17 +149,27 @@
                                 :isContact="true"
                             />
                         </div>
-
-                        <textarea
-                            placeholder="Lời nhắn"
-                            rows="3"
-                            class="w-full bg-transparent border-b border-white/50 focus:border-white outline-none py-2 resize-none"
-                        ></textarea>
+                        <JamFieldSet
+                            v-model="form.contact.data['Nội dung cần hỗ trợ']"
+                            :field="{
+                                rules: rules,
+                                errors: errors,
+                                type: 'textarea',
+                                placeholder: tt('Nội dung lời nhắn...'),
+                                name: 'Nội dung cần hỗ trợ',
+                                fieldName: 'note',
+                                label: tt('Lời nhắn'),
+                                rows: `${screenWidth < 1280 && screenWidth >= 1024 ? '4' : '6'}`,
+                            }"
+                            :isSubmit="isSubmit"
+                            @setIsSubmit="setIsSubmit"
+                            :isContact="true"
+                        />
 
                         <button
                             @click="contact"
                             type="submit"
-                            class="w-full py-3 rounded bg-blue-gradient hover:opacity-90 transition uppercase label-1"
+                            class="w-full py-3 rounded bg-blue-gradient hover:opacity-90 transition uppercase label-1 flex items-center justify-center text-center"
                         >
                             <div>{{ tt('Gửi thông tin') }}</div>
                             <i class="gg-spinner" v-if="isLoading"></i>
@@ -185,7 +190,7 @@
         :title="tt('Yêu cầu thành công')"
         :description="
             tt(
-                'Hệ thống đã nhận thông tin yêu cầu của khách hàng. Wecan sẽ liên hệ và tư vấn Quý khách trong thời gian sớm nhất.'
+                'Hệ thống đã nhận thông tin yêu cầu của khách hàng. Chúng tôi sẽ liên hệ và tư vấn Quý khách trong thời gian sớm nhất.'
             )
         "
     />
