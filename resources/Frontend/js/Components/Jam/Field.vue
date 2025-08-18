@@ -200,7 +200,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .input-form {
-    @apply w-full bg-transparent border-b border-white/50 focus:border-white outline-none py-2;
+    @apply w-full bg-transparent border-b border-white/50 focus:border-white outline-none py-2 relative;
     box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
     &:focus {
         @apply duration-200;

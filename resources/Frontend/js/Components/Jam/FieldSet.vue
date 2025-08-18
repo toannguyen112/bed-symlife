@@ -25,7 +25,7 @@
                 />
                 <small
                     v-if="validate !== true && validate !== undefined"
-                    class="absolute -bottom-1 text-red-600 translate-y-full leading-[100%]"
+                    class="absolute -bottom-1 text-red-600 translate-y-full leading-[100%] inset-x-0"
                 >
                     {{ Array.isArray(error) ? error[0] : `${field.errorText}` }}
                 </small>
