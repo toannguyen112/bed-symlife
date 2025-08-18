@@ -255,10 +255,71 @@ export default {
         setIsSubmit(val) {
             this.isSubmit = val
         },
-        toggleT,
     },
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+    background: white;
+    border-radius: 30px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-200 rounded-[30px];
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400;
+}
+.select-shadow {
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+.gg-spinner {
+    transform: scale(var(--ggs, 1));
+}
+
+.gg-spinner,
+.gg-spinner::after,
+.gg-spinner::before {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+}
+
+.gg-spinner::after,
+.gg-spinner::before {
+    content: '';
+    position: absolute;
+    border-radius: 100px;
+}
+
+.gg-spinner::before {
+    animation: spinner 1s cubic-bezier(0.6, 0, 0.4, 1) infinite;
+    border: 3px solid transparent;
+    border-top-color: currentColor;
+}
+
+.gg-spinner::after {
+    border: 3px solid;
+    opacity: 0.2;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+:deep(.banner-shape) {
+    img {
+        @apply max-md:w-full max-md:h-full max-md:object-cover;
+    }
+}
 </style>
