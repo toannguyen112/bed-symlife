@@ -15,7 +15,14 @@
                     <a href="#thuvien">Thư viện</a>
                     <a href="#lienhe">Liên hệ</a>
                     <div class="inline-flex items-center space-x-[12px] border border-[#DEA23C] rounded-[80px] p-[6px]">
-                        <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg
+                            class="min-w-[32px]"
+                            width="32"
+                            height="33"
+                            viewBox="0 0 32 33"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
                             <rect y="0.96582" width="32" height="32" rx="16" fill="#0A2552" />
                             <g clip-path="url(#clip0_9992_881)">
                                 <path
