@@ -2,12 +2,7 @@
     <template
         v-if="field.type === undefined || field.type === 'text' || field.type === 'email' || field.type === 'password'"
     >
-        <label
-            v-if="field.label && !isFooter"
-            :for="field.name"
-            class="block text-gray-700 label-2"
-            :class="isContact ? 'lg:mb-1.5 mb-1 text-gray-700' : 'mb-[2px] text-white'"
-        >
+        <label v-if="field.label && !isFooter" :for="field.name" class="block label-2 mb-[2px] text-white">
             {{ field.label }}<span v-if="isRequired" class="text-red-600">*</span>
         </label>
         <input
@@ -25,12 +20,7 @@
         />
     </template>
     <template v-else-if="field.type === 'number'">
-        <label
-            v-if="field.label"
-            :for="field.name"
-            class="block label-2"
-            :class="isContact ? 'lg:mb-1.5 mb-1 text-gray-700' : 'mb-[2px] text-white'"
-        >
+        <label v-if="field.label" :for="field.name" class="block label-2 mb-[2px] text-white">
             {{ field.label }}<span v-if="isRequired" class="text-red-600">*</span>
         </label>
         <input
@@ -52,11 +42,7 @@
     </template>
 
     <template v-else-if="field.type === 'textarea'">
-        <label
-            :for="field.name"
-            class="text-gray-700 label-2 lg:mb-1.5 mb-1 block"
-            :class="isContact ? 'lg:mb-1.5 mb-1 text-gray-700' : 'mb-[2px] text-white'"
-        >
+        <label :for="field.name" class="block label-2 mb-[2px] text-white">
             {{ field.label }} <span v-if="isPopup">*</span>
         </label>
 
@@ -214,7 +200,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .input-form {
-    @apply block w-full xl:px-3.5 px-2.5 py-2.5 text-gray-700 border border-gray-300 rounded-lg  bg-white  focus:bg-white focus:ring-0 outline-none focus:outline-none focus:duration-200 focus:border-blue-600 h-[44px];
+    @apply w-full bg-transparent border-b border-white/50 focus:border-white outline-none py-2;
     box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
     &:focus {
         @apply duration-200;
@@ -222,7 +208,7 @@ export default {
 }
 
 .input-area {
-    @apply block w-full py-2.5 xl:px-3.5 px-2.5 text-gray-700 border border-gray-300 rounded-lg  bg-white  focus:bg-white focus:ring-0 outline-none focus:outline-none focus:duration-200 focus:border-blue-500;
+    @apply w-full bg-transparent border-b border-white/50 focus:border-white outline-none py-2;
     box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
     &:focus {
         @apply duration-200;

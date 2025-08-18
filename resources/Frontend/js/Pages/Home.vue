@@ -113,7 +113,6 @@
                             :isSubmit="isSubmit"
                             @setIsSubmit="setIsSubmit"
                             :isContact="true"
-                            class="w-full bg-transparent border-b border-white/50 focus:border-white outline-none py-2"
                         />
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <JamFieldSet
