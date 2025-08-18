@@ -1,15 +1,21 @@
 <template>
     <header class="bg-[#0A2552] text-[#B2DDFF] py-[8px]">
-        <div class="container">
+        <div class="container relative">
             <div class="grid grid-cols-5">
                 <div class="col-span-full md:col-span-2 flex items-center space-x-[24px] justify-center max-md:hidden">
                     <a href="#about"> Giới thiệu</a>
                     <a href="#matbang">Mặt bằng</a>
                     <a href="#tienich">Tiện ích</a>
                 </div>
-                <div class="col-span-full md:col-span-1 flex items-center justify-center">
+                <div class="col-span-full md:col-span-1 flex items-center justify-between">
                     <JPicture src="/assets/images/logo.png" />
+                    <div class="flex items-center gap-5 md:gap-8 lg:hidden">
+                        <button @click="onToggleMenu()">
+                            <Hamburger :isToggleMenu="isToggleMenu" />
+                        </button>
+                    </div>
                 </div>
+
                 <div class="col-span-full md:col-span-2 flex items-center space-x-[24px] justify-center max-md:hidden">
                     <a href="#canho">Căn hộ</a>
                     <a href="#thuvien">Thư viện</a>
@@ -56,12 +62,87 @@
                     </div>
                 </div>
             </div>
+            <div
+                class="fixed md:top-[var(--header-height-md)] top-[var(--header-height-sm)] w-full h-full z-[1000] lg:hidden bg-white"
+                :class="isToggleMenu ? 'right-0' : '-right-full'"
+                style="transition: right 0.5s"
+            >
+                <div
+                    class="w-full md:w-[50vw] h-full bg-primary-25 absolute z-30 duration-300 px-6 py-10 space-y-4"
+                    :class="isToggleMenu ? 'right-0' : '-right-full'"
+                    style="transition: right 0.5s"
+                >
+                    <ul class="space-y-4">
+                        <template v-for="(menuMb, menuMbIndex) in menus" :key="menuMbIndex">
+                            <li
+                                class="flex items-center justify-between py-2"
+                                :class="fullPath.includes(menuMb.slug) ? 'text-primary-800' : 'text-primary-900'"
+                            >
+                                <a :href="menuMb.slug" @click="closeMenu()" class="block w-full">{{ menuMb.title }}</a>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
 </template>
 
 <script>
-export default {}
+export default {
+    props: {
+        fullPath: {
+            type: String,
+            default: '',
+        },
+        fullRoute: {
+            type: String,
+            default: '',
+        },
+    },
+    data() {
+        return {
+            isToggleMenu: false,
+            menus: [
+                {
+                    title: this.tt('Giới thiệu'),
+                    slug: '#about',
+                    subMenu: [],
+                },
+                {
+                    title: this.tt('Mặt bằng'),
+                    slug: '#matbang',
+                    subMenu: [],
+                },
+                {
+                    title: this.tt('Căn hộ'),
+                    slug: '#canho',
+                    subMenu: [],
+                },
+                {
+                    title: this.tt('Tiện ích'),
+                    slug: '#tienich',
+                    subMenu: [],
+                },
+                {
+                    title: this.tt('Thư viện'),
+                    slug: '#thuvien',
+                    subMenu: [],
+                },
+                {
+                    title: this.tt('Liên hê'),
+                    slug: '#lienhe',
+                    subMenu: [],
+                },
+            ],
+        }
+    },
+    methods: {
+        onToggleMenu() {
+            this.isToggleMenu = !this.isToggleMenu
+        },
+    },
+}
 </script>
 
 <style>
