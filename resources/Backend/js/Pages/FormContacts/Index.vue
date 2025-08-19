@@ -4,24 +4,23 @@
         :columns="[
             'id',
             {
-                field: 'email',
+                field: 'Email',
                 transform: (data) => {
-                    return data.data_contact.email
+                    return data.data_contact['Email']
                 },
             },
             {
-                field: 'name',
+                field: 'Name',
                 transform: (data) => {
-                    return data.data.name
+                    return data.data['Name']
                 },
             },
             {
-                field: 'phone',
+                field: 'Phone',
                 transform: (data) => {
-                    return data.data.phone
+                    return data.data['Phone']
                 },
             },
-            'phone',
             'status',
             'created_at',
             'updated_at',
