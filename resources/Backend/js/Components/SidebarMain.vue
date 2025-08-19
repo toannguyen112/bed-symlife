@@ -21,6 +21,16 @@
         <span>{{ tt('models.table_list.post-categories') }}</span>
     </Link>
     <Link
+        v-if="can('admin.contacts.index')"
+        :href="route('admin.contacts.index')"
+        :class="{ active: isUrl('admin.contacts.*') }"
+        class="item"
+    >
+        <material-symbols:connect-without-contact />
+        <span>{{ tt('models.table_list.contacts') }}</span>
+        <span class="badge badge-danger" v-if="newContact">{{ newContact }}</span>
+    </Link>
+    <Link
         v-if="can('admin.sliders.index')"
         :href="route('admin.sliders.index')"
         :class="{ active: isUrl('admin.sliders.*') }"
