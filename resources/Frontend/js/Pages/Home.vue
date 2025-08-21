@@ -1,6 +1,7 @@
 <template>
-    <section>
-        <JPicture src="/assets/images/banner.png" class="w-full h-full" />
+    <section class="relative">
+        <JPicture src="/assets/images/banner.png" class="w-full h-[90vh] object-cover" />
+        <div class="container"><BannerItem /></div>
     </section>
     <section id="about" class="py-[48px] bg-banner-blue bg-cover">
         <div class="container space-y-[48px]">
