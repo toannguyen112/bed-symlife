@@ -1,5 +1,5 @@
 <template>
-    <section id="tienich" class="bg-blue-gradient text-white md:pt-[120px]">
+    <section id="tienich" class="bg-blue-gradient text-white pt-[60px] md:pt-[120px]">
         <!-- Header -->
         <div class="text-center mb-8">
             <h2 class="yellow-primary uppercase font-medium font-display text-[48px] md:text-[60px] leading-tight">
@@ -26,7 +26,6 @@
 
                         <!-- Overlay nội dung -->
                         <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/30 px-6">
-                            <h3 class="text-[100px] font-bold text-[#F2C94C] leading-none">{{ index + 1 }}</h3>
                             <p class="text-center max-w-[600px] text-lg">{{ item.text }}</p>
                         </div>
                     </div>
@@ -48,18 +47,11 @@ import 'swiper/css'
 
 export default {
     components: { Swiper, SwiperSlide },
+    props: ['slides'],
     setup() {
         const swiperRef = ref(null)
         const swiperInstance = ref(null)
         const activeIndex = ref(0)
-
-        const slides = [
-            '/assets/images/reson/Asset 1 1.png',
-            '/assets/images/reson/Asset 1 2.png',
-            '/assets/images/reson/Asset 1 3.png',
-            '/assets/images/reson/Asset 1 1.png',
-            '/assets/images/reson/Asset 1 2.png',
-        ]
 
         const onSwiperInit = (swiper) => {
             swiperInstance.value = swiper
@@ -76,7 +68,6 @@ export default {
         }
 
         return {
-            slides,
             swiperRef,
             onSwiperInit,
             onSlideChange,

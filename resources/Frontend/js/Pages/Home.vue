@@ -1,6 +1,7 @@
 <template>
-    <section>
-        <JPicture src="/assets/images/banner.png" class="w-full h-full" />
+    <section class="relative">
+        <JPicture src="/assets/images/banner.png" class="w-full h-[90vh] object-cover" />
+        <div class="container"><BannerItem /></div>
     </section>
     <section id="about" class="py-[48px] bg-banner-blue bg-cover">
         <div class="container space-y-[48px]">
@@ -80,7 +81,7 @@
     <section>
         <JPicture src="/assets/images/matbang.png" class="w-full h-full" />
     </section>
-    <Benefit :slides="resone" />
+    <Benefit :slides="discover" />
     <Premises />
     <SliderCom />
     <Discover />
@@ -230,6 +231,14 @@ export default {
             isSuccess: false,
             isLoading: false,
             isSubmit: false,
+            discover: [
+                '/assets/images/discover/Asset 1 1.png',
+                '/assets/images/discover/Asset 1 2.png',
+                '/assets/images/discover/Asset 1 3.png',
+                '/assets/images/discover/Asset 1 4.png',
+                '/assets/images/discover/Asset 1 5.png',
+                '/assets/images/discover/Asset 1 6.png',
+            ],
         }
     },
     methods: {
